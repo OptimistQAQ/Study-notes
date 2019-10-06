@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<stdlib.h>
-
 typedef struct node
 {
 	int data;
@@ -50,7 +49,7 @@ void qian_creat(int len)
 //	}
 //}
 
-//  Ç°²å
+//  å‰æ’
 void qian_cha(int data, int newdata) 
 {
 	N *p, *q, *p1;
@@ -62,9 +61,9 @@ void qian_cha(int data, int newdata)
 		h = p;
 		return;
 	}
-	q = h;  //q ÓÀÔ¶Ö¸ÏòÒªÕÒµÄÄÇÒ»¸ö½ÚµãµÄÇ°Ò»¸ö½áµã
-	p = h->next;  //   pÓÀÔ¶Ö¸ÏòqµÄºóÒ»¸ö½áµã
-	////    È»ºó¿ªÊ¼±éÀú²éÕÒ
+	q = h;  //q æ°¸è¿œæŒ‡å‘è¦æ‰¾çš„é‚£ä¸€ä¸ªèŠ‚ç‚¹çš„å‰ä¸€ä¸ªç»“ç‚¹
+	p = h->next;  //   pæ°¸è¿œæŒ‡å‘qçš„åä¸€ä¸ªç»“ç‚¹
+	////    ç„¶åå¼€å§‹éå†æŸ¥æ‰¾
 	while (p)
 	{
 		if (p->data == data)
@@ -93,7 +92,7 @@ void print()
 	printf("\n");
 }
 
-///////////ÊÍ·Å´æ´¢¿Õ¼ä
+///////////é‡Šæ”¾å­˜å‚¨ç©ºé—´
 void free_node()
 {
 	N *p;
@@ -108,15 +107,15 @@ void free_node()
 
 int main() 
 {
-	/////////  Ç°²å´´½¨Á´±í
-	printf("ÇëÊäÈëÁ´±íµÄ³¤¶È£º\n");
+	/////////  å‰æ’åˆ›å»ºé“¾è¡¨
+	printf("è¯·è¾“å…¥é“¾è¡¨çš„é•¿åº¦ï¼š\n");
 	int b,c;
 	scanf("%d", &b);
 	qian_creat(b);
 	print();
 
-	////  Ç°²å²åÈë½áµã
-	printf("ÔÚÄ³ÊıÇ°Ãæ²åÈëÄ³Êı£º\n");
+	////  å‰æ’æ’å…¥ç»“ç‚¹
+	printf("åœ¨æŸæ•°å‰é¢æ’å…¥æŸæ•°ï¼š\n");
 	int data,ins;
 	scanf("%d%d", &data, &ins);
 	qian_cha(data, ins);
