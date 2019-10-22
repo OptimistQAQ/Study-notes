@@ -140,9 +140,9 @@ _也就是说定义了一个结构体类型的指针，这个指针指向了结�
 
 ```c
 struct table{
-int i;
-char c;
-struct table *st;   //定义的结构体指针指向了本身
+    int i;
+    char c;
+    struct table *st;   //定义的结构体指针指向了本身
 };
 ```
 
@@ -308,15 +308,15 @@ node3.next = p_new;
     ```c
     while(1)
     {
-    if(p-next == NULL)
-    {
-        p_rail = p;
-        break;
-    }
+        if(p-next == NULL)
+        {
+            p_rail = p;
+            break;
+        }
         p = p->next;
     }
     p_rail->next = p_new;
-    p_tail = p_new;  
+    p_tail = p_new;
     ```
 
 
@@ -327,8 +327,7 @@ node3.next = p_new;
 
     
     
-    
-    
+
     ![]( https://github.com/qinjiahao666/Study-notes/blob/master/C/pictures/10.png )
     
     ```c
@@ -384,8 +383,7 @@ node3.next = p_new;
         ```c
         char ch; //定义一个字符串
         int i = 0;
-        ch = getchar();
-        while(ch != '\n');
+        while(ch != '\n')
         {
             i = fputc(ch,fp);  // 以字符为单位，写入到text.txt文件
             if(i == -1)
@@ -455,15 +453,15 @@ node3.next = p_new;
         short no;
         char name[10];
         char sex[6];
-};
+    };
     
     struct info info_st[3] ={
         {1,"baoqianyue","men"},
         {2,"lihao","men"},
         {3,"wanghao","men"}
-};
+    };
     
-int count = fwrite(info_st,sizeof(struct info),3,fp);  //写入数据到文件
+    int count = fwrite(info_st,sizeof(struct info),3,fp);  //写入数据到文件
     ```
     
      + info_st 结构体类型指针
