@@ -418,7 +418,7 @@ node3.next = p_new;
             short no;
             char name[10];
             char sex[6];
-    };
+        };
         
         struct info info_st[3] ={
             {1,"baoqianyue","men"},
