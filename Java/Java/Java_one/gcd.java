@@ -14,7 +14,7 @@ public class gcd {
          + a/ gads(a,b)*b);
     }
 
-    public static int gads(int a, int b){
+    private static int gads(int a, int b){
         return b == 0 ? a: gads(b,a%b);
     }
 }
