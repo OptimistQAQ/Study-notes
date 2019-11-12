@@ -238,20 +238,23 @@ int depth(N *t){
 //返回值为x的节点
 N *findNode(N *t, char x)
 {
-    N *p;
-    p = t;
-    if(t == NULL)
-        return NULL;
-    else if (t->data == x)
-        return t;
-    else
-    {
-        p = t->lchild;
-        if(p)
-            findNode(t->lchild,x);
-        else
-            findNode(t->rchild,x);
-    }  
+	N *p;
+	p = t;
+	if (t == NULL)
+		return NULL;
+	else if (t->data == x)
+		return t;
+	else
+	{
+		N *temp;
+		temp = findNode(p->lchild, x);
+		if (!temp)
+		{
+			return findNode(p->rchild, x);
+		}
+		return temp;
+	}
+	return NULL;
 }
 
 int treeFind(N *t,N *node)
