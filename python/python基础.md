@@ -137,3 +137,65 @@ print(bicycles)
 ### ['trek', 'cannondale', 'specialized']
 ### ['cannondale', 'specialized', 'trek']
 ```
+## 使用sorted()进行临时排序
+
+要保留元素原来的排列顺序，同时以特定的顺序将他们呈现出来，可以使用函数sorted()。
+
+```python
+bicycles = ['trek', 'cannondale', 'specialized']
+print("Here is the original list:")
+print(bicycles)
+print("\nHere is the sorted list:")
+print(sorted(bicycles))
+print("\nHere is the original list again:")
+print(bicycles)
+
+##########
+## Here is the original list:
+## ['trek', 'cannondale', 'specialized']
+
+## Here is the sorted list:
+## ['cannondale', 'specialized', 'trek']
+
+## Here is the original list again:
+## ['trek', 'cannondale', 'specialized']
+```
+
+# 遍历整个列表
+
+```python
+bicycles = ['trek', 'cannondale', 'specialized']
+for bicycle in bicycles:
+    print(bicycle)
+
+##  trek
+##  cannondale
+##  specialized
+```
+
+上面这段代码，我们定义了一个for循环，这行代码让Python从列表bicycles中取出一个名字，并将其存储在bicycle中。然后将其打印出来。输出其中的所有的名字。
+
+# 创建数值列表
+
+## 使用函数range()
+
+```python
+for value in range(1, 5):
+    print(value)
+
+## 1
+## 2
+## 3
+## 4
+```
+
+这个示例打印了1—4，这里不包含5.
+
+```python
+numbers = list(range(2, 11, 2))
+print(numbers)
+
+## [2, 4, 6, 8, 10]
+```
+
+这个示例表示创建列表，列表从2开始，然后不断加2，直到达到或超过最终值，因此最后一个输出结果为10.
