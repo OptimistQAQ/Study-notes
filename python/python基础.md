@@ -199,3 +199,102 @@ print(numbers)
 ```
 
 这个示例表示创建列表，列表从2开始，然后不断加2，直到达到或超过最终值，因此最后一个输出结果为10.
+
+# 切片
+
+要创建切片，可以指定要使用的第一个元素和最后一个元素的索引。例如：要输出列表的前三个元素，可指定索引0:3.
+
+```python
+bicycles = ['trek', 'cannondale', 'specialized', 'qin']
+for bicycle in bicycles[0:3]:
+    print(bicycle)
+
+## trek
+## cannondale
+## specialized
+```
+
+上面的例子中使用for循环遍历了bicycles列表中的前三个元素，切片可以指定列表中的任意位置。
+
+# 元组
+
+列表非常适用于存储在程序运行期间可能变化的数据集。列表是可以修改的，这对处理网站的用户列表至关重要。然而，有时候需要创建一系列不可修改的元素，元组可以实现这种操作。
+
+**元组的定义方法是圆括号 ()**
+
+```python
+dimensions = (200, 50)
+print(dimensions[0])
+print(dimensions[1])
+
+## 200
+## 50
+```
+
+元组的值不可修改
+
+`dimensions[0] = 250`
+
+这句话会报错。
+
+```python
+Traceback (most recent call last):
+  File "D:/Program Files (x86)/PychramProjects/python/python_space.py", line 48, in <module>
+    dimensions[0] = 250
+TypeError: 'tuple' object does not support item assignment
+```
+
+**虽然不能修改元组的元素的值，但是可以给存储的元组的变量赋值。因此，如果要修改前诉矩阵的尺寸，可以重新定义整个元组**
+
+```python
+dimensions = (200, 50)
+print(dimensions[0])
+print(dimensions[1])
+dimensions = (400, 200)
+print(dimensions[0])
+print(dimensions[1])
+
+## 200
+## 50
+## 400
+## 200
+```
+
+# 字典（与 Json类似）
+
+在python中，字典是一系列键—值对。每个键都与一个值相对应，可以使用键来访问值。和C++中的map很相似。下面是一个简单的字典。
+
+```python
+# 字典的练习
+alien_0 = {'color': 'green', 'points': '5'}
+print(alien_0['color'])
+print(alien_0['points'])
+
+## green
+## 5
+```
+
+同时，也可以在已经建好的字典里面添加键值对。例如：
+
+```python
+alien_0 = {'color': 'green', 'points': '5'}
+print(alien_0)
+alien_0['x_position'] = 0
+alien_0['y_position'] = 25
+print(alien_0)
+
+## {'color': 'green', 'points': '5'}
+## {'color': 'green', 'points': '5', 'x_position': 0, 'y_position': 25}
+```
+
+**字典中的值是可以修改的。**
+
+### 使用 del 函数删除键值对
+
+```python
+del alien_0['points']
+```
+
+## 还有各种嵌套结构，多层嵌套，列表套列表，列表套元组，字典套字典等等等等，在这里就不过多赘述了，原理是一样的。
+
+# python
