@@ -6,7 +6,7 @@ const int maxsize = 101;
 
 typedef struct {
 	char name[20];   //姓名
-	char info_num[10];   //学号
+	char info_num[20];   //学号
 	char department[20]; //系别
 	char class_num[20]; //班号
 	char card_num[20];   //卡号
