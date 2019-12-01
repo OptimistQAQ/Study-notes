@@ -65,7 +65,7 @@ table shellinsertsort(table tab)
 	d = tab.len / 2;
 	while(d >= 1)
 	{
-		for(i = d+1; i<tab.len; i++)
+		for(i = d+1; i<=tab.len; i++)
 		{
 			tab.r[0] = tab.r[i];
 			j = i-d;
@@ -129,7 +129,6 @@ table sort(table tab)
 //通过卡号查询其他信息，二分法
 int search(table tab, char *key)
 {
-	shellinsertsort(tab);
 	int low = 1,high = tab.len+1, mid;
 	while(low <= high)
 	{
@@ -178,13 +177,15 @@ int main()
 			printf("请输入要查询的卡号：\n");
 			gets(infonum);
 			printf("查询结果：\n");
+			tab = shellinsertsort(tab);
 			int result = search(tab,infonum);
 			if(result != -1)
 			{
 				printf("%21s%21s%21s%21s%21s\n", "姓名", "学号", "系别", "班号", "卡号");
 				printf("%21s%21s%21s%21s%21s\n", tab.r[result].name, tab.r[result].info_num, tab.r[result].department, tab.r[result].class_num, tab.r[result].card_num);
-
 			}
+			else
+				printf("没有找到！\n");
 			break;
 		}
 		case 4:
