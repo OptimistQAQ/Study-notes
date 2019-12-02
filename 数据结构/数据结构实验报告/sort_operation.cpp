@@ -143,6 +143,23 @@ int search(table tab, char *key)
 	return -1;
 }
 
+//通过系别查询卡号
+void depement_search(table tab)
+{
+	getchar();
+	char depe_info[20] = "";
+	printf("请输入要查询的系别：\n");
+	gets(depe_info);
+	printf("查询结果：\n");
+	for(int i=1;i<=tab.len;i++)
+	{
+		if(strcmp(tab.r[i].department,depe_info) == 0)
+		{
+			printf("%21s\n",tab.r[i].card_num);
+		}
+	}
+}
+
 int main()
 {
 	printf("\t\t------------借书证信息查询系统----------\n");
@@ -150,6 +167,7 @@ int main()
 	printf("\t\t         2.对信息进行排序               \n");
 	printf("\t\t         3.查找借书证信息               \n");
 	printf("\t\t         4.输出所有借书信息记录         \n");
+	printf("\t\t         5.通过系别查找卡号             \n");
 	printf("\t\t---------------------------------------\n");
 	int c = 0;  //从键盘上读取的命令
 	table tab;
@@ -191,6 +209,11 @@ int main()
 		case 4:
 			output(tab);
 			break;
+		case 5:
+			{
+				depement_search(tab);
+				break;
+			}
 
 		default:
 			printf("输入错误! \n");
