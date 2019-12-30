@@ -41,7 +41,7 @@ MGraph mGr;   //定义MGraph类型的全局变量
 int shortest[MaxViewNum][MaxViewNum];    //定义全局变量贮存最小路径
 int path[MaxViewNum][MaxViewNum];
 
-//中北大学学校景点信息存图，本次存图采用邻接矩阵形式进行存储
+//中北大学学校景点信息存图，存图采用邻接矩阵形式进行存储
 void init()
 {
 	int i, j;
@@ -206,14 +206,14 @@ void introduce()
 	{
 	case 1:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\学校大门.jpg"), 640, 640);
+		initgraph(1040, 840);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\学校大门.jpg"), 1040, 840);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
 		outtextxy(16, 350, _T("景点编号："));
 		outtextxy(150, 350, _T(mGr.view[1].data.number));
@@ -227,84 +227,85 @@ void introduce()
 
 	case 2:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\德怀楼.jpg"), 640, 640);
+		initgraph(1040, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\德怀楼.jpg"), 1040, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 150, _T("景点编号："));
+		outtextxy(150, 150, _T(mGr.view[2].data.number));
+		outtextxy(16, 180, _T("景点名称："));
+		outtextxy(150, 180, _T(mGr.view[2].data.name));
+		outtextxy(16, 210, _T("景点简介："));
+		outtextxy(150, 210, _T(mGr.view[2].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 3:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\柏林园.jpg"), 640, 640);
+		initgraph(1040, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\柏林园.jpg"), 1040, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
+
 		settextstyle(&f);                     // 设置字体样式
 		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
+		outtextxy(150, 350, _T(mGr.view[3].data.number));
 		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
+		outtextxy(150, 380, _T(mGr.view[3].data.name));
 		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(150, 410, _T(mGr.view[3].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 4:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\二龙山.jpg"), 640, 640);
+		initgraph(1240, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\二龙山.jpg"), 1240, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 100, _T("景点编号："));
+		outtextxy(150, 100, _T(mGr.view[4].data.number));
+		outtextxy(16, 130, _T("景点名称："));
+		outtextxy(150, 130, _T(mGr.view[4].data.name));
+		outtextxy(16, 160, _T("景点简介："));
+		outtextxy(150, 160, _T(mGr.view[4].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 5:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\科艺苑.jpg"), 640, 640);
+		initgraph(940, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\科艺苑.jpg"), 940, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 50, _T("景点编号："));
+		outtextxy(150, 50, _T(mGr.view[5].data.number));
+		outtextxy(16, 80, _T("景点名称："));
+		outtextxy(150, 80, _T(mGr.view[5].data.name));
+		outtextxy(16, 110, _T("景点简介："));
+		outtextxy(150, 110, _T(mGr.view[5].data.introduction));
 		system("pause");
 		closegraph();
 		break;
@@ -316,247 +317,247 @@ void introduce()
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(130, 510, _T("景点编号："));
+		outtextxy(280, 510, _T(mGr.view[6].data.number));
+		outtextxy(130, 540, _T("景点名称："));
+		outtextxy(280, 540, _T(mGr.view[6].data.name));
+		outtextxy(130, 570, _T("景点简介："));
+		outtextxy(280, 570, _T(mGr.view[6].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 7:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\文瀛餐厅.jpg"), 640, 640);
+		initgraph(1340, 840);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\文瀛餐厅.jpg"), 1340, 840);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 70, _T("景点编号："));
+		outtextxy(150, 70, _T(mGr.view[7].data.number));
+		outtextxy(16, 100, _T("景点名称："));
+		outtextxy(150, 100, _T(mGr.view[7].data.name));
+		outtextxy(16, 130, _T("景点简介："));
+		outtextxy(150, 130, _T(mGr.view[7].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 8:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\校医院.jpg"), 640, 640);
+		initgraph(1340, 840);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\校医院.jpg"), 1340, 840);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(30, 710, _T("景点编号："));
+		outtextxy(180, 710, _T(mGr.view[8].data.number));
+		outtextxy(30, 740, _T("景点名称："));
+		outtextxy(180, 740, _T(mGr.view[8].data.name));
+		outtextxy(30, 770, _T("景点简介："));
+		outtextxy(180, 770, _T(mGr.view[8].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 9:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\图书馆.jpg"), 640, 640);
+		initgraph(1340, 840);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\图书馆.jpg"), 1340, 840);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 150, _T("景点编号："));
+		outtextxy(150, 150, _T(mGr.view[9].data.number));
+		outtextxy(16, 180, _T("景点名称："));
+		outtextxy(150, 180, _T(mGr.view[9].data.name));
+		outtextxy(16, 210, _T("景点简介："));
+		outtextxy(150, 210, _T(mGr.view[9].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 10:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\主操场.jpg"), 640, 640);
+		initgraph(1340, 740);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\主操场.jpg"), 1340, 740);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 550, _T("景点编号："));
+		outtextxy(150, 550, _T(mGr.view[10].data.number));
+		outtextxy(16, 580, _T("景点名称："));
+		outtextxy(150, 580, _T(mGr.view[10].data.name));
+		outtextxy(16, 610, _T("景点简介："));
+		outtextxy(150, 610, _T(mGr.view[10].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 11:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\中北大学主楼.jpg"), 640, 640);
+		initgraph(1140, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\中北大学主楼.jpg"), 1140, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 550, _T("景点编号："));
+		outtextxy(150, 550, _T(mGr.view[11].data.number));
+		outtextxy(16, 580, _T("景点名称："));
+		outtextxy(150, 580, _T(mGr.view[11].data.name));
+		outtextxy(16, 610, _T("景点简介："));
+		outtextxy(150, 610, _T(mGr.view[11].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 12:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\行知广场.jpg"), 640, 640);
+		initgraph(1140, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\行知广场.jpg"), 1140, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
 		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
+		outtextxy(150, 350, _T(mGr.view[12].data.number));
 		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
+		outtextxy(150, 380, _T(mGr.view[12].data.name));
 		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(150, 410, _T(mGr.view[12].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 13:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\铁路主题公园.jpg"), 640, 640);
+		initgraph(1040, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\铁路主题公园.jpg"), 1040, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 500, _T("景点编号："));
+		outtextxy(150, 500, _T(mGr.view[13].data.number));
+		outtextxy(16, 530, _T("景点名称："));
+		outtextxy(150, 530, _T(mGr.view[13].data.name));
+		outtextxy(16, 560, _T("景点简介："));
+		outtextxy(150, 560, _T(mGr.view[13].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 14:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\工程训练中心.jpg"), 640, 640);
+		initgraph(1040, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\工程训练中心.jpg"), 1040, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 100, _T("景点编号："));
+		outtextxy(150, 100, _T(mGr.view[14].data.number));
+		outtextxy(16, 130, _T("景点名称："));
+		outtextxy(150, 130, _T(mGr.view[14].data.name));
+		outtextxy(16, 160, _T("景点简介："));
+		outtextxy(150, 160, _T(mGr.view[14].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 15:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\研究生院.jpg"), 640, 640);
+		initgraph(1340, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\研究生院.jpg"), 1340, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(830, 100, _T("景点编号："));
+		outtextxy(964, 100, _T(mGr.view[15].data.number));
+		outtextxy(830, 130, _T("景点名称："));
+		outtextxy(964, 130, _T(mGr.view[15].data.name));
+		outtextxy(830, 160, _T("景点简介："));
+		outtextxy(964, 160, _T(mGr.view[15].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 16:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\唐久超市.jpg"), 640, 640);
+		initgraph(1140, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\唐久超市.jpg"), 1140, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 450, _T("景点编号："));
+		outtextxy(150, 450, _T(mGr.view[16].data.number));
+		outtextxy(16, 480, _T("景点名称："));
+		outtextxy(150, 480, _T(mGr.view[16].data.name));
+		outtextxy(16, 510, _T("景点简介："));
+		outtextxy(150, 510, _T(mGr.view[16].data.introduction));
 		system("pause");
 		closegraph();
 		break;
 
 	case 17:
 		system("cls");
-		initgraph(640, 640);
-		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\邮政办.jpg"), 640, 640);
+		initgraph(1040, 640);
+		loadimage(&bmg, _T("D:\\Program Files (x86)\\VS2017projects\\Navigation_consultation\\Navigation_consultation\\邮政办.jpg"), 1040, 640);
 		putimage(0, 0, &bmg);
 		gettextstyle(&f);                     // 获取当前字体设置
 		f.lfHeight = 25;                      // 设置字体高度
-		_tcscpy(f.lfFaceName, _T("楷体"));    // 设置字体
+		_tcscpy(f.lfFaceName, _T("黑体"));    // 设置字体
 		setbkmode(TRANSPARENT);
-		settextcolor(RED);
+		settextcolor(YELLOW);
 		settextstyle(&f);                     // 设置字体样式
-		outtextxy(16, 350, _T("景点编号："));
-		outtextxy(150, 350, _T(mGr.view[1].data.number));
-		outtextxy(16, 380, _T("景点名称："));
-		outtextxy(150, 380, _T(mGr.view[1].data.name));
-		outtextxy(16, 410, _T("景点简介："));
-		outtextxy(150, 410, _T(mGr.view[1].data.introduction));
+		outtextxy(16, 450, _T("景点编号："));
+		outtextxy(150, 450, _T(mGr.view[17].data.number));
+		outtextxy(16, 480, _T("景点名称："));
+		outtextxy(150, 480, _T(mGr.view[17].data.name));
+		outtextxy(16, 510, _T("景点简介："));
+		outtextxy(150, 510, _T(mGr.view[17].data.introduction));
 		system("pause");
 		closegraph();
 		break;
@@ -568,7 +569,6 @@ void introduce()
 
 	printf("\n");
 }
-
 
 /**********弗洛伊德 最短路径********/
 void floyd()
@@ -937,7 +937,7 @@ int main()
 	printf("*                                                  秦效国   张竞文   *\n");
 	printf("**********************************************************************\n");
 
-	Sleep(1500);
+	Sleep(2000);
 	system("cls");
 
 	char k;
