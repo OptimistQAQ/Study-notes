@@ -20,7 +20,7 @@ print(response.read().decode('utf-8'))
 
 
 
-![]( [https://github.com/OptimistQAQ/Study-notes/blob/master/%E7%88%AC%E8%99%AB/%E5%9B%BE%E7%89%87/1.JPG](https://github.com/OptimistQAQ/Study-notes/blob/master/爬虫/图片/1.JPG) )
+![]( [https://github.com/OptimistQAQ/Study-notes/blob/master/%E7%88%AC%E8%99%AB/%E5%9B%BE%E7%89%87/1.JPG](https://github.com/OptimistQAQ/Study-notes/blob/master/爬虫/图片/1.JPG) 
 
 
 
