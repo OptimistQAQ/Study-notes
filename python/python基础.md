@@ -1,8 +1,8 @@
 # 列表
 
-+ 列表是什么？
-  + 访问列表元素
-  + 使用列表中的各个值
++ [列表是什么？](#列表是什么？)
+  + [访问列表元素](#访问列表元素)
+  + [使用列表中的各个值](#使用列表中的各个值)
 + 修改、添加和删除元素
 + 组织列表
   + 使用sort()对列表进行排序
@@ -70,7 +70,7 @@ print(message)
    ```
 2. 添加元素
     1. 在列表的末尾添加元素
-        
+       
         **使用append()方法**
         ```python
         bicycles = ['trek', 'cannondale', 'specialized']
@@ -90,6 +90,7 @@ print(message)
         print(bicycles)
         bicycles.insert(0, 'ducati')
         print(bicycles)
+        ```
 
 
         ### ['trek', 'cannondale', 'specialized']
