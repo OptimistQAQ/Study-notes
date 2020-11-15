@@ -10,18 +10,216 @@
 
 using namespace std;
 
-int main(){
-	int a, b, c;
-	for (int i=100; i <1000; i++){
-		a = i/100;
-		b = i % 100 /10;
-		c = i % 10;
-		if (a*a*a+b*b*b+c*c*c == i){
-			cout << i << endl;
-		}
+int cal(int n, int p) {
+        if(n < p) return 0;
+        else return n / p + cal(n / p, p);
+}
+
+int main() {
+	int n, k;
+	while(cin>>n>>k) {
+        if(2*k>n)  k=n-k;
+        for(int i=1,m=1;prime[i]<=n,i<t;i++)
+                m*=(cal(n,prime[i])-cal(k,prime[i])-cal(nk, prime[i])+1);  
+        printf("%d/n",m);
 	}
 	return 0;
 }
+
+//const int N=1010;
+//int n, k, ans, a[N];
+//
+//void swap(int x, int y) {
+//	int z=a[x];
+//	a[x] = a[y];
+//	a[y] = z;
+//	return;
+//}
+//
+////判断a[x]是不是转折点 
+//bool pd(int x) {
+//	if(a[x] > a[x-1] && a[x] > a[x+1] || a[x] < a[x-1] && a[x] < a[x+1]) {
+//		return 1;
+//	}
+//	return 0;
+//}
+//
+////m为递归层数，sum为已经有的转折点数量 
+//void dfs(int m, int sum) {
+//	if(m>2 && pd(m-2)) //判断a[m-2]是不是转折点 
+//		sum++;
+//	if(sum>k-1 || sum+n-m<k-1)
+//		return;
+//	if(m==n-1)//全排列到递归出口
+//	{
+//		if(m>1 && pd(m-1))
+//			sum++;
+//		if(sum==k-1)
+//			ans++;
+//		return;
+//	}
+//	//全排列
+//	for (int i=m; i<n; i++) {
+//		swap(m, i);
+//		dfs(m+1, sum);
+//		swap(m, i);
+//	}
+//	for (int i=m; i<n; i++) {
+//		cout << i << " ";
+//	}
+//	cout << endl;
+//	return;
+//}
+//
+//int main() {
+//	cin >> n >> k;
+//	for (int i=0; i<n; i++)
+//		a[i] = i+1;
+//	dfs(0,0);
+//	cout << ans << endl;
+//	return 0;
+//}
+
+
+//int main() {
+//	
+//	int t = 2019*2019;
+//	for (int x=2020;;x++) {
+//		int x2=x*x;
+//		int y2=2 * x2 - t;
+//		int y = sqrt(y2);
+//		if (y*y==y2) {
+//			cout << x+y << endl;
+//			break;
+//		}
+//	}
+//	
+//	return 0;
+//}
+
+//const int N=1010;
+//int dp[N][N];
+//string s, t;
+//
+//int main() {
+//	cin >> s >> t;
+//	int ls = s.size();
+//	int lt = t.size();
+//	if(s[0] != t[0])
+//		dp[0][0] = 1;
+//	
+//	for (int i=1; i<lt; i++){
+//		if(s[i]==t[i])
+//			dp[i][i] = dp[i-1][i-1];
+//		else
+//			dp[i][i] = dp[i-1][i-1] + 1; 
+//	}
+//	
+//	for(int i=1; i<ls; i++) {
+//		if(s[i] == t[0])
+//			dp[i][0]=0;
+//		else
+//			dp[i][0] = dp[i-1][0];
+//	}
+//	
+//	for (int j=1; j<lt; j++) {
+//		for (int i=j+1; i<ls; i++) {
+//			if(s[i] == t[j])
+//				dp[i][j] = dp[i-1][j-1];
+//			else
+//				dp[i][j] = min(dp[i-1][j], dp[i-1][j-1]+1);
+//		}
+//	}
+//	
+//	printf("%d\n", dp[ls-1][lt-1]);
+//	
+//	return 0;
+//}
+
+
+
+//int main() {
+//	for (int i=100; ; i++) {
+//		int sum = 0;
+//		for (int j=1; j<=i; j++) {
+//			if (i%j == 0)
+//				sum++;
+//		}
+//		if (sum == 100) {
+//			cout << i << endl;
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+
+
+//typedef long long ll;
+//const int N=25;
+//int ans;
+//bool vis[N][N];
+//int b[4][2] = {{0,1},{0, -1}, {1, 0}, {-1, 0}};
+//
+//void dfs(int x, int y, int k) {
+//	if (k > 12)
+//		return;
+//	for (int i=0; i<4; i++) {
+//		int tx = x + b[i][0];
+//		int ty = y + b[i][1];
+//		if (!tx && !ty && k+1>2 && k+1<=12)
+//			ans++;
+//		if (tx<0 || tx >7 || ty < 0 || ty > 7)
+//			continue;
+//		if (vis[tx][ty])
+//			continue;
+//		vis[tx][ty] = 1;
+//		dfs(tx, ty, k+1);
+//		vis[tx][ty] = 0;
+//	}
+//	return ;
+//}
+//
+//int main() {
+//	vis[0][0] = 1;
+//	dfs(0, 0, 0);
+//	vis[0][0] = 0;
+//	cout << ans << endl;
+//	return 0;
+//}
+
+
+
+//int main() {
+//	int t = 2019 * 2019;
+//	for(int x=2020;;x++) {
+//		int x2 = x*x;
+//		int y2 = 2 * x2 - t;
+//		int y = sqrt(y2);
+//		if (y * y == y2) {
+//			cout << x+y << endl;
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+//int main(){
+//	int a, b, c;
+//	for (int i=100; i <1000; i++){
+//		a = i/100;
+//		b = i % 100 /10;
+//		c = i % 10;
+//		if (a*a*a+b*b*b+c*c*c == i){
+//			cout << i << endl;
+//		}
+//	}
+//	return 0;
+//}
 
 //int f[20190324];
 //
